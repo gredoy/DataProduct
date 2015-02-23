@@ -4,7 +4,7 @@ library(shiny)
 shinyUI(
     fluidPage(
         # Application title
-        titlePanel("Adstock Transformation Example!"),
+        titlePanel("Adstock Transformation !"),
         
         # Sidebar with a slider input for adstock rate
         sidebarLayout(
@@ -12,8 +12,9 @@ shinyUI(
                 p("Select the desired adstock rate."),
                 sliderInput("adstock.rate", "Adstock Rate:", min = 0, max = 100, value = 0, 
                             animate=animationOptions(interval=500, loop=TRUE)),
-                helpText("Note: The adstock rate is % of advertising retained from one week to the next. It is a recursive retention."),
-                p(a("App Help", href="http://rpubs.com/AnalyticsArtist/25188"), target="_blank")
+                helpText("Note: The adstock rate is % of advertising retained from one week to the next. It is a recursive retention.
+                         " ),
+                p(a("App Help;To begin Select the desired Stock Rate on selector slider ", href="http://rpubs.com/gredoy/62543"), target="_blank")
                 # Insert optimize button here.
                 # actionButton("optimize", "Optimize")
             ),
